@@ -29,7 +29,8 @@ avroAgent.sinks.elasticSearch.client = transport
 avroAgent.sinks.elasticSearch.serializer=org.apache.flume.sink.elasticsearch.ElasticSearchLogStashEventSerializer
 
 avroAgent.sinks.log4jSink.type = org.apache.flume.sink.log4j.Log4jSink
-avroAgent.sinks.log4jSink.channel = fileCh
+avroAgent.sinks.log4jSink.channel = memoryChannel
+avroAgent.sinks.log4jSink.configFile = ./conf/log4j.properties
 
 avroAgent.channels.fileCh.type = file 
 
@@ -44,5 +45,5 @@ avroAgent.channels.memoryChannel.capacity = 100
 ````
 
 
-
+`bin/flume-ng agent -c ./conf -f conf/avro.conf -n avroAgent -Dflume.root.logger=INFO,console`
 
