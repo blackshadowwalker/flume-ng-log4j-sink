@@ -1,0 +1,16 @@
+.project
+.classpath
+target
+.settings
+
+*.svn*
+.svn
+*.iml
+.idea
+bak
+*.log
+
+node_modules
+.build
+.minify
+.DS_Store
