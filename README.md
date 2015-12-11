@@ -30,7 +30,8 @@ avroAgent.sinks.elasticSearch.serializer=org.apache.flume.sink.elasticsearch.Ela
 
 avroAgent.sinks.log4jSink.type = org.apache.flume.sink.log4j.Log4jSink
 avroAgent.sinks.log4jSink.channel = memoryChannel
-avroAgent.sinks.log4jSink.configFile = ./conf/log4j.properties
+avroAgent.sinks.log4jSink.ignoreNotLog4jLog = true
+avroAgent.sinks.log4jSink.configFile = ./log4j.xml
 
 avroAgent.channels.fileCh.type = file 
 
